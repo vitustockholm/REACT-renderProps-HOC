@@ -3,6 +3,9 @@ import Greeting from './components/Greeting';
 import ClickCounter from './components/Counter/ClickCounter';
 import HoverCounter from './components/Counter/HoverCounter';
 import Counter from './components/Counter/Counter';
+import User from './components/User/User';
+import Admin from './components/User/Admin';
+import Logout from './components/User/Logout';
 
 function App() {
   return (
@@ -29,6 +32,27 @@ function App() {
         <Counter
           render={(count, increment) => (
             <HoverCounter count={count} increment={increment} />
+          )}
+        />
+        {/* User / Admin */}
+        <Logout
+          render={(logout) => (
+            <User
+              userData={{ name: 'John', email: 'john@johnies.jo' }}
+              logout={logout}
+            />
+          )}
+        />
+        <Logout
+          render={(logout) => (
+            <Admin
+              adminData={{
+                name: 'Alexx',
+                email: 'Saha@rossia.pravda',
+                role: 'SEO manager',
+              }}
+              logout={logout}
+            />
           )}
         />
       </div>
