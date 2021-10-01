@@ -1,16 +1,16 @@
-import Button from './components/Button';
+import Button from './components/render_props/Button';
 import Greeting from './components/Greeting';
 import ClickCounter from './components/Counter/ClickCounter';
 import HoverCounter from './components/Counter/HoverCounter';
 import Counter from './components/Counter/Counter';
-import User from './components/User/User';
-import Admin from './components/User/Admin';
-import Logout from './components/User/Logout';
+import User from './components/render_props/User/User';
+import Admin from './components/render_props/User/Admin';
+import Logout from './components/render_props/User/Logout';
 //  Task 2021-10-01 react-prop-types passing props without REACT_API_hooks
 import Paragraph from './components/Paragraph_user';
 //second component
 import Cookies from './components/Cookies';
-import SetCookie from './components/SetCookie';
+import SetCookie from './components/render_props/SetCookie';
 function App() {
   return (
     <>
