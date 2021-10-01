@@ -1,16 +1,20 @@
-import Button from './components/render_props/Button';
-import Greeting from './components/Greeting';
-import ClickCounter from './components/Counter/ClickCounter';
-import HoverCounter from './components/Counter/HoverCounter';
-import Counter from './components/Counter/Counter';
-import User from './components/render_props/User/User';
-import Admin from './components/render_props/User/Admin';
-import Logout from './components/render_props/User/Logout';
+// import Button from './components/render_props/Button';
+// import Greeting from './components/Greeting';
+// import ClickCounter from './components/Counter/ClickCounter';
+// import HoverCounter from './components/Counter/HoverCounter';
+// import Counter from './components/Counter/Counter';
+// import User from './components/render_props/User/User';
+// import Admin from './components/render_props/User/Admin';
+// import Logout from './components/render_props/User/Logout';
 //  Task 2021-10-01 react-prop-types passing props without REACT_API_hooks
-import Paragraph from './components/Paragraph_user';
-//second component
-import Cookies from './components/Cookies';
+import Paragraph from './components/render_props/Paragraph_user';
+// //second component
+import Cookies from './components/render_props/Cookies';
 import SetCookie from './components/render_props/SetCookie';
+// 2part
+import ClickCounter from './components/hoc/ClickCounter';
+import HoverCounter from './components/hoc/HoverCoiunter';
+//
 function App() {
   return (
     <>
@@ -59,18 +63,16 @@ function App() {
             />
           )}
         /> */}
-        <hr />
+
         <p>---TASK render props---</p>
         <br />
-        <Paragraph
+        {/* <Paragraph
           render={(type) =>
             //type ? <h1></h1> : <h6></h6>
             type === 'has_info' ? <h1>true: {type}</h1> : <h1>false: noinfo</h1>
           }
-        />
-        <br />
-        <hr />
-        <br />
+        /> */}
+
         <SetCookie
           render={(cookie) => (
             <Cookies instantData={{ id: '1', name: 'test' }} cookie={cookie} />
@@ -81,6 +83,10 @@ function App() {
             <Cookies instantData={{ id: '2', name: 'test2' }} cookie={cookie} />
           )}
         />
+        <hr />
+        <h1>---High orders Components---</h1>
+        <ClickCounter />
+        <HoverCounter />
       </div>
     </>
   );
